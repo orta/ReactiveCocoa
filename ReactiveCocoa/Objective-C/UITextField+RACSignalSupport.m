@@ -32,6 +32,19 @@
 		setNameWithFormat:@"%@ -rac_textSignal", [self rac_description]];
 }
 
+- (RACSignal *)rac_returnKeySignal {
+	@weakify(self);
+
+	return [[[[RACSignal
+		defer:^{
+			@strongify(self);
+			return [RACSignal return:self];
+		}]
+		concat:[self rac_signalForControlEvents:UIControlEventEditingDidEndOnExit]]
+		takeUntil:self.rac_willDeallocSignal]
+		setNameWithFormat:@"%@ -rac_returnKeySignal", [self rac_description]];
+}
+
 - (RACChannelTerminal *)rac_newTextChannel {
 	return [self rac_channelForControlEvents:UIControlEventEditingChanged | UIControlEventEditingDidBegin key:@keypath(self.text) nilValue:@""];
 }
