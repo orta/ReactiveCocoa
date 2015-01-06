@@ -14,6 +14,7 @@ Pod::Spec.new do |s|
   s.subspec "no-arc" do |ss|
     ss.source_files = "ReactiveCocoa/Objective-C/RACObjCRuntime.{h,m}"
     ss.requires_arc = false
+    ss.framework  = "Foundation"
   end
 
   s.subspec "Core" do |ss|
@@ -22,6 +23,7 @@ Pod::Spec.new do |s|
     ss.private_header_files = "**/*Private.h", "**/*EXTRuntimeExtensions.h", "**/RACEmpty*.h"
     ss.exclude_files = "ReactiveCocoa/**/*{RACObjCRuntime,AppKit,NSControl,NSText,NSTable,UIActionSheet,UIAlertView,UIBarButtonItem,UIButton,UICollectionReusableView,UIControl,UIDatePicker,UIGestureRecognizer,UIImagePicker,UIRefreshControl,UISegmentedControl,UISlider,UIStepper,UISwitch,UITableViewCell,UITableViewHeaderFooterView,UIText}*"
     ss.header_dir = "ReactiveCocoa"
+    ss.framework  = "Foundation"
   end
 
   s.subspec "UI" do |ss|
@@ -31,6 +33,7 @@ Pod::Spec.new do |s|
     ss.osx.exclude_files = "ReactiveCocoa/**/*{UIActionSheet,UIAlertView,UIBarButtonItem,UIButton,UICollectionReusableView,UIControl,UIDatePicker,UIGestureRecognizer,UIImagePicker,UIRefreshControl,UISegmentedControl,UISlider,UIStepper,UISwitch,UITableViewCell,UITableViewHeaderFooterView,UIText}*.{d,h,m,swift}"
     ss.ios.exclude_files = "ReactiveCocoa/**/*{AppKit,NSControl,NSText,NSTable}*.{d,h,m,swift}"
     ss.header_dir = "ReactiveCocoa"
+    ss.frameworks = "Foundation", "UIKit"
   end
 
   s.dependency "LlamaKit"
