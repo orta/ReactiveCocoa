@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.author       = { "Josh Abernathy" => "josh@github.com" }
   s.ios.deployment_target = "8.0"
   s.osx.deployment_target = "10.10"
-  s.source       = { :git => "https://github.com/ReactiveCocoa/ReactiveCocoa.git", :commit => "b2fa37ce468e7c676f3bc9984b9c607753928c89" }
+  s.source       = { :git => "https://github.com/ashfurrow/ReactiveCocoa.git", :branch => "podspec" }
   s.default_subspec = "UI"
 
   s.subspec "no-arc" do |ss|
@@ -27,6 +27,7 @@ Pod::Spec.new do |s|
   s.subspec "UI" do |ss|
     ss.dependency "ReactiveCocoa/Core"
     ss.source_files = "ReactiveCocoa/**/*{AppKit,NSControl,NSText,NSTable,UIActionSheet,UIAlertView,UIBarButtonItem,UIButton,UICollectionReusableView,UIControl,UIDatePicker,UIGestureRecognizer,UIImagePicker,UIRefreshControl,UISegmentedControl,UISlider,UIStepper,UISwitch,UITableViewCell,UITableViewHeaderFooterView,UIText}*"
+    ss.private_header_files = "**/*Private.h", "**/*EXTRuntimeExtensions.h", "**/RACEmpty*.h"
     ss.osx.exclude_files = "ReactiveCocoa/**/*{UIActionSheet,UIAlertView,UIBarButtonItem,UIButton,UICollectionReusableView,UIControl,UIDatePicker,UIGestureRecognizer,UIImagePicker,UIRefreshControl,UISegmentedControl,UISlider,UIStepper,UISwitch,UITableViewCell,UITableViewHeaderFooterView,UIText}*.{d,h,m,swift}"
     ss.ios.exclude_files = "ReactiveCocoa/**/*{AppKit,NSControl,NSText,NSTable}*.{d,h,m,swift}"
     ss.header_dir = "ReactiveCocoa"
