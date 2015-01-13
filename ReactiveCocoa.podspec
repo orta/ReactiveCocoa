@@ -20,21 +20,20 @@ Pod::Spec.new do |s|
   s.subspec "Core" do |ss|
     ss.dependency "ReactiveCocoa/no-arc"
     ss.source_files  = "ReactiveCocoa/**/*.{d,h,m,swift}"
-    ss.private_header_files = "**/*Private.h", "**/*EXTRuntimeExtensions.h", "**/RACEmpty*.h"
-    ss.exclude_files = "ReactiveCocoa/**/*{RACObjCRuntime,AppKit,NSControl,NSText,NSTable,UIActionSheet,UIAlertView,UIBarButtonItem,UIButton,UICollectionReusableView,UIControl,UIDatePicker,UIGestureRecognizer,UIImagePicker,UIRefreshControl,UISegmentedControl,UISlider,UIStepper,UISwitch,UITableViewCell,UITableViewHeaderFooterView,UIText}*"
+    ss.exclude_files = "**/ReactiveCocoa.h", "ReactiveCocoa/**/*{RACObjCRuntime,AppKit,NSControl,NSText,NSTable,UIActionSheet,UIAlertView,UIBarButtonItem,UIButton,UICollectionReusableView,UIControl,UIDatePicker,UIGestureRecognizer,UIImagePicker,UIRefreshControl,UISegmentedControl,UISlider,UIStepper,UISwitch,UITableViewCell,UITableViewHeaderFooterView,UIText}*"
     ss.header_dir = "ReactiveCocoa"
+    ss.private_header_files = "**/*Private.h", "**/*EXTRuntimeExtensions.h", "**/RACEmpty*.h"
     ss.framework  = "Foundation"
   end
 
   s.subspec "UI" do |ss|
     ss.dependency "ReactiveCocoa/Core"
-    ss.source_files = "ReactiveCocoa/**/*{AppKit,NSControl,NSText,NSTable,UIActionSheet,UIAlertView,UIBarButtonItem,UIButton,UICollectionReusableView,UIControl,UIDatePicker,UIGestureRecognizer,UIImagePicker,UIRefreshControl,UISegmentedControl,UISlider,UIStepper,UISwitch,UITableViewCell,UITableViewHeaderFooterView,UIText}*"
-    ss.private_header_files = "**/*Private.h", "**/*EXTRuntimeExtensions.h", "**/RACEmpty*.h"
-    ss.osx.exclude_files = "ReactiveCocoa/**/*{UIActionSheet,UIAlertView,UIBarButtonItem,UIButton,UICollectionReusableView,UIControl,UIDatePicker,UIGestureRecognizer,UIImagePicker,UIRefreshControl,UISegmentedControl,UISlider,UIStepper,UISwitch,UITableViewCell,UITableViewHeaderFooterView,UIText}*.{d,h,m,swift}"
-    ss.ios.exclude_files = "ReactiveCocoa/**/*{AppKit,NSControl,NSText,NSTable}*.{d,h,m,swift}"
-    ss.header_dir = "ReactiveCocoa"
-    ss.frameworks = "Foundation", "UIKit"
+    ss.framework = 'Foundation'
+    ss.ios.source_files = "**/ReactiveCocoa.h", "ReactiveCocoa/**/*{UIActionSheet,UIAlertView,UIBarButtonItem,UIButton,UICollectionReusableView,UIControl,UIDatePicker,UIGestureRecognizer,UIImagePicker,UIRefreshControl,UISegmentedControl,UISlider,UIStepper,UISwitch,UITableViewCell,UITableViewHeaderFooterView,UIText}*"
+    ss.osx.source_files = "**/ReactiveCocoa.h", "ReactiveCocoa/**/*{AppKit,NSControl,NSText,NSTable}*"
+    ss.ios.framework = 'UIKit'
+    ss.osx.framework = 'AppKit'
   end
 
-  s.dependency "LlamaKit"
+  s.dependency "LlamaKit", "0.1.1"
 end
