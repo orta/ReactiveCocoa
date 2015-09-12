@@ -18,7 +18,6 @@
   },
   "default_subspecs": "UI",
   "dependencies": {
-    "Box": [],
     "Result": []
   },
   "subspecs": [
