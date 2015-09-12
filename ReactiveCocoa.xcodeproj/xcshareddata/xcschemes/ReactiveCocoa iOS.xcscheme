@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D047260B19E49F82006002AA"
-               BuildableName = "ReactiveCocoa.framework"
+               BuildableName = ".framework"
                BlueprintName = "ReactiveCocoa-iOS"
                ReferencedContainer = "container:ReactiveCocoa.xcodeproj">
             </BuildableReference>
@@ -58,7 +58,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D047260B19E49F82006002AA"
-            BuildableName = "ReactiveCocoa.framework"
+            BuildableName = ".framework"
             BlueprintName = "ReactiveCocoa-iOS"
             ReferencedContainer = "container:ReactiveCocoa.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D047260B19E49F82006002AA"
-            BuildableName = "ReactiveCocoa.framework"
+            BuildableName = ".framework"
             BlueprintName = "ReactiveCocoa-iOS"
             ReferencedContainer = "container:ReactiveCocoa.xcodeproj">
          </BuildableReference>
@@ -98,7 +98,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D047260B19E49F82006002AA"
-            BuildableName = "ReactiveCocoa.framework"
+            BuildableName = ".framework"
             BlueprintName = "ReactiveCocoa-iOS"
             ReferencedContainer = "container:ReactiveCocoa.xcodeproj">
          </BuildableReference>
