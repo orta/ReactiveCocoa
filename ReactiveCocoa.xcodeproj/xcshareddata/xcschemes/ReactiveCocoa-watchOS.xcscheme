@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A9B315531B3940610001CB9C"
-               BuildableName = "ReactiveCocoa.framework"
+               BuildableName = ".framework"
                BlueprintName = "ReactiveCocoa-watchOS"
                ReferencedContainer = "container:ReactiveCocoa.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A9B315531B3940610001CB9C"
-            BuildableName = "ReactiveCocoa.framework"
+            BuildableName = ".framework"
             BlueprintName = "ReactiveCocoa-watchOS"
             ReferencedContainer = "container:ReactiveCocoa.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A9B315531B3940610001CB9C"
-            BuildableName = "ReactiveCocoa.framework"
+            BuildableName = ".framework"
             BlueprintName = "ReactiveCocoa-watchOS"
             ReferencedContainer = "container:ReactiveCocoa.xcodeproj">
          </BuildableReference>
