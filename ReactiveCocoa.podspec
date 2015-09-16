@@ -41,6 +41,7 @@ Pod::Spec.new do |s|
     ss.dependency 'ReactiveCocoa/no-arc'
 
     ss.watchos.exclude_files = '**/NSURLConnection*'
+    ss.watchos.pod_target_xcconfig = {'GCC_PREPROCESSOR_DEFINITIONS' => 'DTRACE_PROBES_DISABLED=1'}
   end
 
   s.subspec 'UI' do |ss|
